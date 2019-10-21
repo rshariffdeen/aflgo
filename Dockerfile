@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     libncurses5-dev \
     minisat \
     nano \
-    ninja \
+    ninja-build \
     perl \
     python2.7 \
     python-pip \
@@ -55,7 +55,6 @@ RUN apt-get update && apt install -y \
     automake \
     libclang-4.0-dev \
     libtool-bin  \
-    ninja-build \
     python-dev \
     python3 \
     python3-dev \
