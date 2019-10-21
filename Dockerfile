@@ -3,7 +3,6 @@ MAINTAINER Ridwan Shariffdeen <ridwan@comp.nus.edu.sg>
 
 RUN apt-get update && apt-get install -y \
     autoconf \
-    automake \
     bison \
     binutils-dev \
     binutils-gold \
@@ -18,7 +17,6 @@ RUN apt-get update && apt-get install -y \
     minisat \
     nano \
     ninja \
-    ninja-build \
     perl \
     python2.7 \
     python-pip \
@@ -54,8 +52,10 @@ RUN ninja cxx; ninja install-cxx
 RUN mkdir /usr/lib/bfd-plugins; cp /usr/local/lib/libLTO.so /usr/lib/bfd-plugins; cp /usr/local/lib/LLVMgold.so /usr/lib/bfd-plugins
 RUN export LC_ALL=C
 RUN apt-get update && apt install -y \
+    automake \
     libclang-4.0-dev \
     libtool-bin  \
+    ninja-build \
     python-dev \
     python3 \
     python3-dev \
