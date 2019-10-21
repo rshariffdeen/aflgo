@@ -65,6 +65,6 @@ RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install networkx pydot pydotplus
 
 # build AFLGo
-RUN cd $HOME; git clone https://github.com/rshariffdeen/aflgo.git
-RUN cd aflgo; make clean all; cd llvm_mode; make clean all
-RUN export AFLGO=$HOME/aflgo
+RUN git clone https://github.com/rshariffdeen/aflgo.git /aflgo
+RUN cd /aflgo; make clean all; cd llvm_mode; make clean all
+RUN export AFLGO=/aflgo
